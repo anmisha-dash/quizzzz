@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f2f5;
+        }
+        h1 { color: #333; }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover { background-color: #0056b3; }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Quiz</h1>
+    <p>Which language is used for web page structure?</p>
+    <button onclick="checkAnswer('HTML')">HTML</button>
+    <button onclick="checkAnswer('CSS')">CSS</button>
+    <button onclick="checkAnswer('JavaScript')">JavaScript</button>
+
+    <div id="result"></div>
+
+    <script>
+        function checkAnswer(answer) {
+            const result = document.getElementById('result');
+            if(answer === 'HTML') {
+                result.style.color = 'green';
+                result.innerText = 'Correct!';
+            } else {
+                result.style.color = 'red';
+                result.innerText = 'Wrong!';
+            }
+        }
+    </script>
+</body>
+</html>
